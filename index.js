@@ -21,6 +21,6 @@ app.use(bodyParser.urlencoded({ // for posted form
 
 require('./cats.js')(app)
 
-const server = app.listen(3000, () => {
+app.listen(3000, () => {
   console.log('server at localhost 3000')
 })
