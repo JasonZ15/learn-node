@@ -1,11 +1,10 @@
-const _ = require('lodash');
+const _ = require('lodash')
 
 module.exports = (app) => {
+  const _cats = []
 
-  _cats = [];
-
-  //read
+  // read
   app.get('/cat', (req, res) => {
-    res.send(_cats);
-  });
-};
+    res.send(_cats)
+  })
+}
