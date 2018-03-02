@@ -10,12 +10,16 @@
 // console.log('Server running at local host 3000');
 
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('hello world!');
-});
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ // for posted form
+  extended: true
+}));
+
+require('./cats.js')(app);
 
 const server = app.listen(3000, ()=>{
   console.log('server at localhost 3000');
