@@ -1,9 +1,9 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const catSchema = mongoose.Schema({
   name: String,
   age: Number,
-  type: String
-})
+  type: String,
+});
 
-module.exports = mongoose.model('Cat', catSchema)
+module.exports = mongoose.model('Cat', catSchema);
